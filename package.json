@@ -1,5 +1,5 @@
 {
-  "name": "react-native-ios-kit",
+  "name": "@louischeminant/react-native-ios-kit",
   "version": "0.0.7",
   "description": "The missing React Native UI Kit for iOS.",
   "main": "src/index.js",
@@ -20,13 +20,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/callstack/react-native-ios-kit.git"
+    "url": "git+https://github.com/louischeminant/react-native-ios-kit.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/callstack/react-native-ios-kit/issues"
+    "url": "https://github.com/louischeminant/react-native-ios-kit/issues"
   },
-  "homepage": "https://github.com/callstack/react-native-ios-kit#readme",
+  "homepage": "https://github.com/louischeminant/react-native-ios-kit#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
