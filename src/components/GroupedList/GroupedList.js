@@ -165,6 +165,7 @@ class GroupedList extends React.PureComponent<Props, State> {
           getItemLayout={getItemLayout}
           stickySectionHeadersEnabled={stickySectionHeadersEnabled}
           keyExtractor={keyExtractor || deafultKeyExtractor}
+          showsVerticalScrollIndicator={false}
         />
         <Sections
           onSectionPress={this.handleSectionPress}

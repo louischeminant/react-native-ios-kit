@@ -123,7 +123,10 @@ class Sections extends PureComponent<Props, State> {
         <Text
           key={index}
           style={[
-            { color: sectionPrimaryColor || theme.primaryColor },
+            {
+              color: sectionPrimaryColor || theme.primaryColor,
+              fontWeight: 'bold',
+            },
             styles.section,
           ]}
         >
@@ -135,7 +138,10 @@ class Sections extends PureComponent<Props, State> {
       <View key={index} style={styles.dotContainer}>
         <View
           style={[
-            { backgroundColor: sectionPrimaryColor || theme.primaryColor },
+            {
+              backgroundColor: sectionPrimaryColor || theme.primaryColor,
+              fontWeight: 'bold',
+            },
             styles.dot,
           ]}
         />

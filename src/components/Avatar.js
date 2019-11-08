@@ -72,7 +72,7 @@ const getStyles = (avatarSize: number) =>
     letterWrapper: {
       height: avatarSize,
       width: avatarSize,
-      borderRadius: avatarSize / 2,
+      borderRadius: 12,
       justifyContent: 'center',
       backgroundColor: 'transparent',
     },
@@ -86,6 +86,6 @@ const getStyles = (avatarSize: number) =>
     avatar: {
       width: avatarSize,
       height: avatarSize,
-      borderRadius: avatarSize / 2,
+      borderRadius: 12,
     },
   });
