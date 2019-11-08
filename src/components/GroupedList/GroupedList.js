@@ -1,7 +1,7 @@
 /* @flow */
 
 import * as React from 'react';
-import { View, StyleSheet, SectionList } from 'react-native';
+import { View, StyleSheet, SectionList, Text } from 'react-native';
 
 import Sections from './Sections';
 import { withTheme } from '../../core/theming';
@@ -116,11 +116,11 @@ class GroupedList extends React.PureComponent<Props, State> {
           },
         }) => this.handleSectionHeaderLayout(height, data)}
       >
-        <Headline>
+        <Text style={this.styles.headerText}>
           {data.section &&
             typeof data.section === 'object' &&
             data.section.title}
-        </Headline>
+        </Text>
       </View>
     );
   };
@@ -188,10 +188,14 @@ const getStyles = theme =>
       paddingVertical: 5,
       paddingHorizontal: 15,
       backgroundColor: theme.barColor,
-      color: theme.primaryColor,
     },
     headerText: {
       fontWeight: 'bold',
+      color: theme.primaryColor,
+      fontSize: 17,
+      leading: 22,
+      tracking: -24,
+      fontWeight: '600',
     },
     separator: {
       backgroundColor: theme.barColor,
