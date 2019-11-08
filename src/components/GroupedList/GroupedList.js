@@ -188,6 +188,7 @@ const getStyles = theme =>
       paddingVertical: 5,
       paddingHorizontal: 15,
       backgroundColor: theme.barColor,
+      color: theme.primaryColor,
     },
     headerText: {
       fontWeight: 'bold',
