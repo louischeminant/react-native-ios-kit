@@ -112,7 +112,7 @@ class GroupedList extends React.PureComponent<Props, State> {
         style={{
           paddingVertical: 5,
           paddingHorizontal: 15,
-          backgroundColor: theme.barColor,
+          backgroundColor: this.props.theme.barColor,
         }}
         onLayout={({
           nativeEvent: {
@@ -123,7 +123,7 @@ class GroupedList extends React.PureComponent<Props, State> {
         <Text
           style={{
             fontWeight: 'bold',
-            color: theme.primaryColor,
+            color: this.props.theme.primaryColor,
             fontSize: 17,
             leading: 22,
             tracking: -24,
@@ -162,7 +162,7 @@ class GroupedList extends React.PureComponent<Props, State> {
     const Separator = () => (
       <View
         style={{
-          backgroundColor: theme.barColor,
+          backgroundColor: this.props.theme.barColor,
           height: 1,
           marginLeft: 15,
         }}
