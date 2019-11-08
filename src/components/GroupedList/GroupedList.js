@@ -109,14 +109,27 @@ class GroupedList extends React.PureComponent<Props, State> {
 
     return (
       <View
-        style={this.styles.header}
+        style={{
+          paddingVertical: 5,
+          paddingHorizontal: 15,
+          backgroundColor: theme.barColor,
+        }}
         onLayout={({
           nativeEvent: {
             layout: { height },
           },
         }) => this.handleSectionHeaderLayout(height, data)}
       >
-        <Text style={this.styles.headerText}>
+        <Text
+          style={{
+            fontWeight: 'bold',
+            color: theme.primaryColor,
+            fontSize: 17,
+            leading: 22,
+            tracking: -24,
+            fontWeight: '600',
+          }}
+        >
           {data.section &&
             typeof data.section === 'object' &&
             data.section.title}
@@ -146,7 +159,15 @@ class GroupedList extends React.PureComponent<Props, State> {
 
     const deafultKeyExtractor = item => item.key || item.id;
 
-    const Separator = () => <View style={this.styles.separator} />;
+    const Separator = () => (
+      <View
+        style={{
+          backgroundColor: theme.barColor,
+          height: 1,
+          marginLeft: 15,
+        }}
+      />
+    );
 
     return (
       <View style={this.styles.container}>
@@ -183,19 +204,6 @@ const getStyles = theme =>
     container: {
       flexDirection: 'row',
       flexGrow: 1,
-    },
-    header: {
-      paddingVertical: 5,
-      paddingHorizontal: 15,
-      backgroundColor: theme.barColor,
-    },
-    headerText: {
-      fontWeight: 'bold',
-      color: theme.primaryColor,
-      fontSize: 17,
-      leading: 22,
-      tracking: -24,
-      fontWeight: '600',
     },
     separator: {
       backgroundColor: theme.barColor,
