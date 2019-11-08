@@ -44,7 +44,9 @@ class Avatar extends React.Component<Props> {
     if (url) {
       return <Image style={[styles.avatar, style]} source={{ uri: url }} />;
     }
-    const overlay = require('../assets/avatartGradient.png');
+    const overlay = this.props.theme.light
+      ? require('../assets/avatarGradientLight.png')
+      : require('../assets/avatarGradientDark.png');
     return (
       <ImageBackground
         imageStyle={[styles.avatar]}
