@@ -15,19 +15,19 @@ export const Title3 = createText({
   fontWeight: '400',
 });
 export const Headline = createText({
-  fontSize: 17,,
+  fontSize: 17,
   fontWeight: '600',
 });
 export const Body = createText({
-  fontSize: 17,,
+  fontSize: 17,
   fontWeight: '400',
 });
 export const Callout = createText({
-  fontSize: 16,,
+  fontSize: 16,
   fontWeight: '400',
 });
 export const Subhead = createText({
-  fontSize: 15,,
+  fontSize: 15,
   fontWeight: '400',
 });
 export const Footnote = createText({
