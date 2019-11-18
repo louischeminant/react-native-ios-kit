@@ -5,7 +5,6 @@ import { View, StyleSheet, SectionList, Text } from 'react-native';
 
 import Sections from './Sections';
 import { withTheme } from '../../core/theming';
-import { Headline } from '../Typography';
 
 import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types/Theme';
