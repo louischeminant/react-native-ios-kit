@@ -45,7 +45,6 @@ class StyledText extends React.Component<Props> {
       fontSize,
       fontWeight: config.fontWeight,
       letterSpacing,
-      lineHeight: config.leading,
       color: theme.textColor,
     };
     return (
