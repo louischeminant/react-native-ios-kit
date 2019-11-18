@@ -124,8 +124,6 @@ class GroupedList extends React.PureComponent<Props, State> {
             fontWeight: 'bold',
             color: this.props.theme.primaryColor,
             fontSize: 17,
-            leading: 22,
-            tracking: -24,
             fontWeight: '600',
           }}
         >
