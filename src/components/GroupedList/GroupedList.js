@@ -1,7 +1,7 @@
 /* @flow */
 
 import * as React from 'react';
-import { View, StyleSheet, SectionList, Text } from 'react-native';
+import { View, StyleSheet, SectionList, Text, Animated } from 'react-native';
 
 import Sections from './Sections';
 import { withTheme } from '../../core/theming';
@@ -178,7 +178,9 @@ class GroupedList extends React.PureComponent<Props, State> {
     });
 
     return (
-      <View style={[this.styles.container, { marginTop: headerHeight }]}>
+      <Animated.View
+        style={[this.styles.container, { marginTop: headerHeight }]}
+      >
         <SectionList
           initialNumToRender={getItemLayout ? 30 : Number.MAX_SAFE_INTEGER}
           ref={sectionList => {
@@ -203,7 +205,7 @@ class GroupedList extends React.PureComponent<Props, State> {
           style={sectionsStyle}
           sectionPrimaryColor={sectionPrimaryColor}
         />
-      </View>
+      </Animated.View>
     );
   }
 }
