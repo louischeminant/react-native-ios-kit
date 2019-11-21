@@ -152,6 +152,7 @@ class GroupedList extends React.PureComponent<Props, State> {
       renderSectionFooter,
       stickySectionHeadersEnabled,
       keyExtractor,
+      onScroll,
     } = this.props;
 
     const deafultKeyExtractor = item => item.key || item.id;
@@ -166,8 +167,18 @@ class GroupedList extends React.PureComponent<Props, State> {
       />
     );
 
+    const HEADER_MAX_HEIGHT = 141;
+    const HEADER_MIN_HEIGHT = 98;
+    const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
+
+    const headerHeight = this.props.scrollY.interpolate({
+      inputRange: [0, HEADER_SCROLL_DISTANCE],
+      outputRange: [HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
+      extrapolate: 'clamp',
+    });
+
     return (
-      <View style={this.styles.container}>
+      <View style={[this.styles.container, { marginTop: headerHeight }]}>
         <SectionList
           initialNumToRender={getItemLayout ? 30 : Number.MAX_SAFE_INTEGER}
           ref={sectionList => {
@@ -184,6 +195,8 @@ class GroupedList extends React.PureComponent<Props, State> {
           stickySectionHeadersEnabled={stickySectionHeadersEnabled}
           keyExtractor={keyExtractor || deafultKeyExtractor}
           showsVerticalScrollIndicator={false}
+          onScroll={onScroll}
+          style={{ paddingTop: marginTop }}
         />
         <Sections
           onSectionPress={this.handleSectionPress}
