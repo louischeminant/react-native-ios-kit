@@ -196,7 +196,6 @@ class GroupedList extends React.PureComponent<Props, State> {
           keyExtractor={keyExtractor || deafultKeyExtractor}
           showsVerticalScrollIndicator={false}
           onScroll={onScroll}
-          style={{ paddingTop: marginTop }}
         />
         <Sections
           onSectionPress={this.handleSectionPress}
