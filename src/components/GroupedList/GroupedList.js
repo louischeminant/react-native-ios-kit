@@ -153,6 +153,7 @@ class GroupedList extends React.PureComponent<Props, State> {
       stickySectionHeadersEnabled,
       keyExtractor,
       onScroll,
+      keyboardShouldPersistTaps,
     } = this.props;
 
     const deafultKeyExtractor = item => item.key || item.id;
@@ -198,6 +199,7 @@ class GroupedList extends React.PureComponent<Props, State> {
           keyExtractor={keyExtractor || deafultKeyExtractor}
           showsVerticalScrollIndicator={false}
           onScroll={onScroll}
+          keyboardShouldPersistTaps={keyboardShouldPersistTaps}
         />
         <Sections
           onSectionPress={this.handleSectionPress}
