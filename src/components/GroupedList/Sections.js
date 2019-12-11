@@ -33,7 +33,8 @@ class Sections extends PureComponent<Props, State> {
     sections: [],
   };
 
-  componentWillMount() {
+  constructor(props) {
+    super(props);
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onStartShouldSetPanResponderCapture: () => true,
