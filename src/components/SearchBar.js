@@ -71,6 +71,7 @@ class SearchBar extends React.Component<Props, State> {
     cancelText: 'Cancel',
     animated: false,
     animationTime: 200,
+    width: Dimensions.get('window').width,
   };
   state = {
     anim: new Animated.Value(0),
@@ -118,6 +119,7 @@ class SearchBar extends React.Component<Props, State> {
       value,
       placeholder,
       onValueChange,
+      width,
       theme: {
         barColor,
         backgroundColor,
@@ -130,7 +132,7 @@ class SearchBar extends React.Component<Props, State> {
       animated,
     } = this.props;
     const { anim, cancelWidth } = this.state;
-    const { width } = Dimensions.get('window');
+    // const { width } = Dimensions.get('window');
     return (
       <View style={[{ backgroundColor, width }, styles.container]}>
         <TouchableHighlight
