@@ -156,7 +156,7 @@ class GroupedList extends React.PureComponent<Props, State> {
       keyboardShouldPersistTaps,
     } = this.props;
 
-    const deafultKeyExtractor = item => item.key || item.id;
+    const deafultKeyExtractor = (item) => item.key || item.id;
 
     const Separator = () => (
       <View
@@ -168,23 +168,11 @@ class GroupedList extends React.PureComponent<Props, State> {
       />
     );
 
-    const HEADER_MAX_HEIGHT = 141;
-    const HEADER_MIN_HEIGHT = 98;
-    const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
-
-    const headerHeight = this.props.scrollY.interpolate({
-      inputRange: [0, HEADER_SCROLL_DISTANCE],
-      outputRange: [HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
-      extrapolate: 'clamp',
-    });
-
     return (
-      <Animated.View
-        style={[this.styles.container, { marginTop: headerHeight }]}
-      >
+      <View style={this.styles.container}>
         <SectionList
           initialNumToRender={getItemLayout ? 30 : Number.MAX_SAFE_INTEGER}
-          ref={sectionList => {
+          ref={(sectionList) => {
             this.sectionList = sectionList;
           }}
           renderItem={renderItem}
@@ -212,7 +200,7 @@ class GroupedList extends React.PureComponent<Props, State> {
   }
 }
 
-const getStyles = theme =>
+const getStyles = (theme) =>
   StyleSheet.create({
     container: {
       flexDirection: 'row',
