@@ -195,7 +195,7 @@ class GroupedList extends React.PureComponent<Props, State> {
           style={sectionsStyle}
           sectionPrimaryColor={sectionPrimaryColor}
         />
-      </Animated.View>
+      </View>
     );
   }
 }
